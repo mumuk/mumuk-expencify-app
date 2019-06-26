@@ -22,7 +22,7 @@ export class AddExpensePage extends React.Component {
 
 
 const mapDispatchToProps = (dispatch) => ({
-  onSubmit: (expense) => dispatch(addExpense(expense))
+  addExpense: (expense) => dispatch(addExpense(expense))
 });
 
 

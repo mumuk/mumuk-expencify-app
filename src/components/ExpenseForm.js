@@ -51,7 +51,7 @@ export default class ExpenseForm extends React.Component {
   onSubmit = (e) => {
     e.preventDefault();
     if (!this.state.description || !this.state.amount) {
-      this.setState(() => ({error: 'Please provide description  and amount!'}))
+      this.setState(() => ({error: 'Пожалуйста заполните описание и сумму'}))
     } else {
       this.setState(() => ({error: ''}));
       this.props.onSubmit({
@@ -73,7 +73,7 @@ export default class ExpenseForm extends React.Component {
           {this.state.error && <p className="form-error">{this.state.error}</p>}
           <input
             type="text"
-            placeholder='Description'
+            placeholder='Описание'
             autoFocus
             className="text-input"
             value={this.state.description}
@@ -81,7 +81,7 @@ export default class ExpenseForm extends React.Component {
           />
           <input
             type='text'
-            placeholder='Amount'
+            placeholder='Сумма'
             className="text-input"
             value={this.state.amount}
             onChange={this.onAmountChange}
@@ -98,13 +98,13 @@ export default class ExpenseForm extends React.Component {
 
           <textarea
             className="textarea"
-            placeholder="Add a note for yor expense (optional)"
+            placeholder="Примечание к расходу (опционально)"
             value={this.state.note}
             onChange={this.onNoteChange}
           >
           </textarea>
           <div>
-          <button className="button">Save Expense</button>
+          <button className="button">Сохранить расход</button>
           </div>
         </form>
     )

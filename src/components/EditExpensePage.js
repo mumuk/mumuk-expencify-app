@@ -28,7 +28,7 @@ export class EditExpensePage extends React.Component {
           />
           <button
             className="button button--secondary"
-            onClick={this.onRemove}>Remove Expense
+            onClick={this.onRemove}>Удалить расход
           </button>
         </div>
       </div>
